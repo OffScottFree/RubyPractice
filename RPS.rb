@@ -18,18 +18,9 @@ end
 
 puts "You chose #{item}"
 
-comp = ['r', 'R', 'p', 'P', 'S', 's'].sample
+citem = ['Rock', 'Paper', 'Scissors'].sample
 
-sleep 0.75 
-
-case comp
-when 'r' , 'R'
-   citem = 'Rock'
-when 'p' , 'P'
-  citem = 'Paper'
-when 's' , 'S'
-  citem = 'Scissors'
-end
+sleep 0.75
 
 puts "Computer chose #{citem}"
 
