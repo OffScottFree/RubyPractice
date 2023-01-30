@@ -3,15 +3,15 @@
 puts "Best of five!"
 
 play_again = "Y"
-compscore = 0
+comp_score = 0
 score = 0
 while play_again.upcase() == "Y" 
 
   puts 'Rock (R), Paper (P), Scissors! (S)'
 
-  ropasc = gets.chomp
+  r_p_s = gets.chomp
 
-  case ropasc.upcase()
+  case r_p_s.upcase()
   when  'R'
     item = 'Rock' 
   when 'P'
@@ -26,36 +26,36 @@ while play_again.upcase() == "Y"
 
   puts "You chose #{item}"
 
-  citem = ['Rock', 'Paper', 'Scissors'].sample
+  comp_item = ['Rock', 'Paper', 'Scissors'].sample
 
   sleep 0.75
 
-  puts "Computer chose #{citem}"
+  puts "Computer chose #{comp_item}"
 
   sleep 0.75
 
-  if item == citem 
+  if item == comp_item 
     puts 'Darn, a draw' 
-  elsif item == "Rock" && citem == "Scissors"
+  elsif item == "Rock" && comp_item == "Scissors"
     puts 'Winner! Suck it computer!'; score += 1
-  elsif item == "Scissors" && citem == "Paper"
+  elsif item == "Scissors" && comp_item == "Paper"
     puts 'Winner! Suck it computer!'; score += 1
-  elsif item == 'Paper' && citem == 'Rock'
+  elsif item == 'Paper' && comp_item == 'Rock'
     puts 'Winner! Suck it computer!'; score += 1
   elsif item == 'Dynamite'
     score += 1; puts "You autowin. Hooray for cheating!"
   else
-    compscore += 1; puts 'You Lose! Sucks to Suck!' 
+    comp_score += 1; puts 'You Lose! Sucks to Suck!' 
   end
 
   sleep 0.75 
 
   if score == 5 
-    abort ("You win #{score} - #{compscore}")
-  elsif compscore == 5
-    abort ("You lose #{compscore} - #{score}")
+    abort ("You win #{score} - #{comp_score}")
+  elsif comp_score == 5
+    abort ("You lose #{comp_score} - #{score}")
   else
-    puts "The score is #{score} - #{compscore}"
+    puts "The score is #{score} - #{comp_score}"
   end
  
   puts "Would you like to play again? (Y/N)"
