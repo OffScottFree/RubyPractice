@@ -1,5 +1,4 @@
 # RubyPractice
-Folder containing practice Ruby scripts
 
 A collection of Ruby Scripts written as I learn Ruby. 
 
